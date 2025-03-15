@@ -1,7 +1,7 @@
 'use client'
 
 import { useSearchParams } from 'next/navigation'
-import { AuthForm } from '@/components/auth/auth-form'
+import { AuthForm } from '../components/auth/auth-form'
 
 export default function SignupPage() {
   const searchParams = useSearchParams()
