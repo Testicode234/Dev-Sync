@@ -1,13 +1,21 @@
 'use client'
 
+import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { AuthForm } from '../../components/auth/auth-form';
-
+import { AuthForm } from '@/components/auth/auth-form'
 
 export default function SignupPage() {
+  return (
+    <Suspense fallback={<p>Loading signup form...</p>}>
+      <SignupContent />
+    </Suspense>
+  )
+}
+
+function SignupContent() {
   const searchParams = useSearchParams()
   const type = searchParams.get('type')
-  
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
