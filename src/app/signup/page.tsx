@@ -2,7 +2,7 @@
 
 import { Suspense } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { AuthForm } from '@/components/auth/auth-form'
+import { AuthForm } from '../../components/auth/auth-form'
 
 export default function SignupPage() {
   return (
