@@ -3,6 +3,8 @@
 import { AuthForm } from '../../components/auth/auth-form'
 
 export default function LoginPage() {
+  if (typeof window === 'undefined') return null
+
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
       <div className="w-full max-w-md space-y-8">
